@@ -90,4 +90,6 @@ As SDK requires access to camera and photo library, these two keys need to be de
 ### FAQ
 
 * error "This app attempts to access privacy-sensitive data without a usage description. The app's Info.plist must contain an NSPhotoLibraryUsageDescription key with a string value explaining to the user how the app uses this data"
-<p style="color:grey">This is caused by missing of declaration of privacy resource, please refer to 'Resource Requirements' section</p>
+```html
+<div style="color:blue;">This is caused by missing of declaration of privacy resource, please refer to 'Resource Requirements' section</div>
+```

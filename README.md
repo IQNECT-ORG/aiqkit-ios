@@ -80,3 +80,9 @@ This is the same as the Keyword search, except the parameter is of type `UIImage
     NSLog(@"Payload: %@", response.payload); 
 }];
 ```
+
+### Resource Requirements
+
+As SDK requires access to camera and photo library, these two keys need to be declared in info.plist file of your project,
+   * Privacy - Camera Usage Description ----> This app requries access to your camera
+   * Privacy - Photo Library Usage Description ----> This app requires access to your photos

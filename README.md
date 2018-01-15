@@ -1,7 +1,7 @@
-iQKit iOS SDK
+AIQKit iOS SDK
 -------------
 
-The iQKit iOS SDK gives you access to the powerful iQNECT Vision Search platform
+The AIQKit iOS SDK gives you access to the powerful AIQ Vision Search platform
 to integrate into your iOS app.
 
 Installation
@@ -23,7 +23,7 @@ Initialization
 
 #### Required
 
-In your App Delegate, initialise the SDK with the App ID and secret you obtained from the [iQNECT Developer Portal](http://developer.iqnect.org):
+In your App Delegate, initialise the SDK with the App ID and secret you obtained from the [AIQ Developer Portal](http://developer.iqnect.org):
 
 ```objc
 #import "iQKit.h"

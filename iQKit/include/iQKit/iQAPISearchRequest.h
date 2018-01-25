@@ -2,12 +2,11 @@
 //  iQAPISearchRequest.h
 //  iQKit
 //
-//  Copyright (c) 2015 iQNECT. All rights reserved.
+//  Copyright (c) 2015 AIQ. All rights reserved.
 //
 
 #import "iQAPIRequest.h"
 #import "iQAPISearchResponse.h"
-#import <CoreLocation/CLBeaconRegion.h>
 
 @interface iQAPISearchRequest : iQAPIRequest
 
@@ -15,7 +14,6 @@
 + (instancetype)requestWithBarcode:(NSString *)barcode;
 + (instancetype)requestWithImage:(UIImage *)image;
 + (instancetype)requestWithImageData:(NSData *)imageData;
-+ (instancetype)requestWithBeacon:(CLBeacon *)beacon;
 
 - (void)runWithCompletionHandler:(void (^)(iQAPISearchResponse *response))handler;
 

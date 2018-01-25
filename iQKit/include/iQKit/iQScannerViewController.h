@@ -1,7 +1,7 @@
 //
 //  iQScannerViewController.h
 //  iQKit
-//  Copyright (c) 2015 iQNECT. All rights reserved.
+//  Copyright (c) 2015 AIQ. All rights reserved.
 //
 
 #import "iQViewController.h"

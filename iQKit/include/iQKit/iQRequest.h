@@ -1,10 +1,18 @@
 //
 //  IQRequest.h
-//  iQNECT
+//  AIQ
 //
 //  Created by Ricardo Santos on 27/08/2014.
 //  Copyright (c) 2014 NextFaze Pty Ltd. All rights reserved.
 //
+
+/**
+ * Liyi Comment here
+ * iQRequest itself not used by iQKit, but used by AIQMobile
+ * iQAPISearchRequest uses iQAPIRequest class, which is quite
+ * similiar with iQRequest that send http request to server, with
+ * URL, parameters and post data
+ */
 
 #import <Foundation/Foundation.h>
 

@@ -9,6 +9,6 @@
 
 @interface ViewController : UIViewController
 
-
+@property(strong, nonatomic)UIButton *loginButton;
 @end
 

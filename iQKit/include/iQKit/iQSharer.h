@@ -1,6 +1,6 @@
 //
 //  IQSharer.h
-//  iQNECT
+//  AIQ
 //
 //  Created by Ricardo Santos on 14/05/2015.
 //  Copyright (c) 2015 NextFaze Pty Ltd. All rights reserved.

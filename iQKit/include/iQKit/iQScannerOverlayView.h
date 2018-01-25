@@ -2,7 +2,7 @@
 //  iQScannerOverlayView.h
 //  iQKit
 //
-//  Copyright (c) 2015 iQNECT. All rights reserved.
+//  Copyright (c) 2015 AIQ. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
@@ -29,7 +29,6 @@
 
 @property (nonatomic, strong) UIButton *hintButton;
 @property (nonatomic, strong) UIButton *menuButton;
-@property (nonatomic, strong) UIButton *musicButton;
 @property (nonatomic, strong) UIButton *closeButton;
 @property (nonatomic, strong) UIButton *galleryButton;
 @property (nonatomic, strong) UIButton *cameraButton;

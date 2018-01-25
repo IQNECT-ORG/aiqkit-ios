@@ -19,8 +19,8 @@
     // Override point for customization after application launch.
     
 #warning TODO insert your app ID and secret here (visit http://developer.iqnect.org to get them)
-    [iQKit setAppID:@""
-       andAppSecret:@""];
+    [iQKit setAppID:@"2932454d1e5b5bdf9658e518388b7fee2b5ab216a62ae27974"
+       andAppSecret:@"31a3082c22443c2879b81abf53ea72c943f7c81cfb35abc2f583569ee717eacb"];
     
     
     return YES;

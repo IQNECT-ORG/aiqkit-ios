@@ -1,6 +1,6 @@
 //
 //  IQUserInformation.h
-//  iQNECT
+//  AIQ
 //
 //  Created by Luke Scholefield on 5/05/2014.
 //  Copyright (c) 2014 NextFaze Pty Ltd. All rights reserved.

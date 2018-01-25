@@ -2,16 +2,15 @@
 //  iQKit.h
 //  iQKit
 //
-//  Copyright (c) 2015 iQNECT. All rights reserved.
+//  Copyright (c) 2015 AIQ. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
-
+#import <CoreLocation/CoreLocation.h>
 #import "iQStyle.h"
 #import "iQScannerViewController.h"
 #import "iQAPISearchRequest.h"
 #import "iQNetworkStatus.h"
-#import "iQDataStore.h"
 
 typedef NS_ENUM(NSUInteger, iQKitAPIServer) {
     iQKitAPIServerProduction,

@@ -3,7 +3,7 @@
 //  iQKit
 //
 //  Created by Dan Silk on 21/07/2015.
-//  Copyright (c) 2015 iQNECT. All rights reserved.
+//  Copyright (c) 2015 AIQ. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>

@@ -1,5 +1,17 @@
 PODS:
+  - Bolts (1.8.4):
+    - Bolts/AppLinks (= 1.8.4)
+    - Bolts/Tasks (= 1.8.4)
+  - Bolts/AppLinks (1.8.4):
+    - Bolts/Tasks
+  - Bolts/Tasks (1.8.4)
+  - FBSDKCoreKit (4.27.1):
+    - Bolts (~> 1.7)
+  - FBSDKLoginKit (4.27.1):
+    - FBSDKCoreKit
   - iQKit (0.9.3):
+    - FBSDKCoreKit
+    - FBSDKLoginKit
     - Masonry
     - NFAllocInit (~> 1.0)
     - OpenCV (= 2.4.9)
@@ -27,7 +39,10 @@ EXTERNAL SOURCES:
     :path: ..
 
 SPEC CHECKSUMS:
-  iQKit: 46994294d4261ed1455c6aee37bd799553924555
+  Bolts: 8a7995239dbe724f9cba2248b766d48b7ebdd322
+  FBSDKCoreKit: 03365dad5d790249196ffad8be4f6d8a2d98f932
+  FBSDKLoginKit: 66ff53b73cffd967ab773e32fac39e90a60e6d46
+  iQKit: 5d3c421717a19b3f8b9b433c6a3abc0ee3927450
   Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
   NFAllocInit: b72c4d7ada11797bf150c92bea6a0f816bba10e8
   OpenCV: bb17904e55fc19b1f0f6c3e29bc04a7dd31eddb9

@@ -7,14 +7,15 @@
 
 #import <MobileCoreServices/UTCoreTypes.h>
 #import <iQKit/iQKit.h>
-
+#import "LoginViewController.h"
+#import "RegisterViewController.h"
 #import "ViewController.h"
-
 #import "SVProgressHUD.h"
 #import "SVWebViewController.h"
 
 @interface ViewController () <iQScannerViewControllerDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate>
-
+{
+}
 @end
 
 @implementation ViewController
@@ -41,6 +42,26 @@
     [galleryButton addTarget:self action:@selector(galleryButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:galleryButton];
     
+    // test register
+    _loginButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    _loginButton.frame = CGRectMake(padding, scannerButton.bottom + 2 * padding + 1*scannerButton.height, scannerButton.width, scannerButton.height);
+    _loginButton.backgroundColor = [UIColor lightGrayColor];
+    _loginButton.layer.cornerRadius = 4.0;
+    [_loginButton setTitle:@"Register" forState:UIControlStateNormal];
+    [_loginButton addTarget:self action:@selector(registerButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:_loginButton];
+    
+    // test login
+    _loginButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    _loginButton.frame = CGRectMake(padding, scannerButton.bottom + 3 * padding + 2*scannerButton.height, scannerButton.width, scannerButton.height);
+    _loginButton.backgroundColor = [UIColor lightGrayColor];
+    _loginButton.layer.cornerRadius = 4.0;
+    [_loginButton setTitle:@"Login" forState:UIControlStateNormal];
+    [_loginButton addTarget:self action:@selector(loginButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:_loginButton];
+    
+    
+    
     [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeBlack];
 }
 
@@ -65,6 +86,20 @@
     imagePickerController.delegate = self;
     imagePickerController.allowsEditing = NO;
     [self presentViewController:imagePickerController animated:YES completion:nil];
+}
+
+- (void)loginButtonTapped:(id)sender
+{
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    LoginViewController* lc = [storyboard instantiateViewControllerWithIdentifier:@"LoginViewController"];
+    [self presentViewController:lc animated:NO completion:nil];
+}
+
+- (void)registerButtonTapped:(id)sender
+{
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    RegisterViewController* rc = [storyboard instantiateViewControllerWithIdentifier:@"RegisterViewController"];
+    [self presentViewController:rc animated:NO completion:nil];
 }
 
 #pragma mark -

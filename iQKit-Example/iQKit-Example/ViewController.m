@@ -43,22 +43,22 @@
     [self.view addSubview:galleryButton];
     
     // test register
-    _loginButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    /*_loginButton = [UIButton buttonWithType:UIButtonTypeCustom];
     _loginButton.frame = CGRectMake(padding, scannerButton.bottom + 2 * padding + 1*scannerButton.height, scannerButton.width, scannerButton.height);
     _loginButton.backgroundColor = [UIColor lightGrayColor];
     _loginButton.layer.cornerRadius = 4.0;
     [_loginButton setTitle:@"Register" forState:UIControlStateNormal];
     [_loginButton addTarget:self action:@selector(registerButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:_loginButton];
+    [self.view addSubview:_loginButton];*/
     
     // test login
-    _loginButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    /*_loginButton = [UIButton buttonWithType:UIButtonTypeCustom];
     _loginButton.frame = CGRectMake(padding, scannerButton.bottom + 3 * padding + 2*scannerButton.height, scannerButton.width, scannerButton.height);
     _loginButton.backgroundColor = [UIColor lightGrayColor];
     _loginButton.layer.cornerRadius = 4.0;
     [_loginButton setTitle:@"Login" forState:UIControlStateNormal];
     [_loginButton addTarget:self action:@selector(loginButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:_loginButton];
+    [self.view addSubview:_loginButton];*/
     
     
     

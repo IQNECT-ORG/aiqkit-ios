@@ -44,12 +44,6 @@ typedef NS_ENUM(NSUInteger, iQKitAPIServer) {
  */
 + (void)setAppID:(NSString *)appID andAppSecret:(NSString *)appSecret;
 
-/*!
- @abstract Sets the youtubeApiKey of your application.
- 
- @param youtubeApiKey The API Key for your Youtube requests.
- */
-+ (void)setYoutubeApiKey:(NSString *)youtubeApiKey;
 
 /*!
  @abstract The current app id that was used to configure iQKit.
@@ -61,10 +55,6 @@ typedef NS_ENUM(NSUInteger, iQKitAPIServer) {
  */
 + (NSString *)appSecret;
 
-/*!
- @abstract API Key for Youtube search requests.
- */
-+ (NSString *)youtubeApiKey;
 
 /*!
  @abstract Set which API server you want to reference

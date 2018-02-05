@@ -12,7 +12,7 @@ Installation
 Using [CocoaPods](https://cocoapods.org), add to your podfile:
 
 ```
-pod 'iQKit'
+pod 'AIQKit'
 ```
 
 Run `pod install` to download the SDK and install it into your project, along with the SDK's dependencies.

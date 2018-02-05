@@ -1,20 +1,20 @@
 Pod::Spec.new do |s|
 
-  s.name         = "iQKit"
-  s.version      = "0.9.3"
-  s.summary      = "Search by iQNECT."
+  s.name         = "AIQKit"
+  s.version      = "0.9.4"
+  s.summary      = "Search by AIQ."
   s.description  = <<-DESC
-                   Search by iQNECT
+                   Search by AIQ 
 
                    * text/keyword search
                    * image search
                    DESC
-  s.homepage     = "https://github.com/iqnect-org/iqkit-ios"
-  s.license      = { :type => "Commercial", :text => "http://iqnect.org/business/terms-and-conditions/" }
-  s.author        = "iQNECT"
+  s.homepage     = "https://github.com/iqnect-org/aiqkit-ios"
+  s.license      = { :type => "Commercial", :text => "http://aiq.tech/business/terms-and-conditions/" }
+  s.author        = "AIQ"
 
-  s.platform     = :ios, "8.0"
-  s.source       = { :git => "https://github.com/iqnect-org/iqkit-ios.git", :tag => s.version.to_s }
+  s.platform     = :ios, "8.3"
+  s.source       = { :git => "https://github.com/iqnect-org/aiqkit-ios.git", :tag => s.version.to_s }
   
   s.source_files = "iQKit/include/iQKit/*.h"
   s.public_header_files = "iQKit/include/iQKit/*.h"

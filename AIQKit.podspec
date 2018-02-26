@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "AIQKit"
-  s.version      = "0.9.4.2"
+  s.version      = "0.9.4.3"
   s.summary      = "Search by AIQ."
   s.description  = <<-DESC
                    Search by AIQ 
@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
                    * image search
                    DESC
   s.homepage     = "https://github.com/iqnect-org/aiqkit-ios"
-  s.license      = { :type => "Commercial", :text => "http://aiq.tech/business/terms-and-conditions/" }
+  s.license      = { :type => "Commercial", :text => "http://aiq.tech/enterprise.php#" }
   s.author        = "AIQ"
 
   s.platform     = :ios, "8.3"

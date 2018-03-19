@@ -6,7 +6,7 @@
 //
 
 #import <MobileCoreServices/UTCoreTypes.h>
-#import <iQKit/iQKit.h>
+#import <AIQKit/iQKit.h>
 #import "LoginViewController.h"
 #import "RegisterViewController.h"
 #import "ViewController.h"

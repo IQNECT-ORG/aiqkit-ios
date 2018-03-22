@@ -19,8 +19,8 @@
     // Override point for customization after application launch.
     
 #warning TODO insert your app ID and secret here (visit http://developer.aiq.tech to get them)
-    [iQKit setAppID:@"263520e2382302e98a690a0af5c0929333bddf24e93347ce5b"
-       andAppSecret:@"5b6f4245f2c22aa184738c3dd910499f4d7d960f00bd658b38b82974133d4347"];
+    [iQKit setAppID:@"5f61ed2c19e734ca4cf29aa7413dc2ec5bd7e1fb3882cdb1db"
+       andAppSecret:@"15d674e0308a6d05838ca10b64c087d6287b45406137a459581a4b7bc6c1f445"];
     
     
     return YES;

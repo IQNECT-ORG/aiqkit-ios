@@ -1,8 +1,8 @@
 //
 //  ViewController.m
-//  iQKit-Example
+//  AIQKit-Example
 //
-//  Copyright (c) 2015 iQNECT. All rights reserved.
+//  Copyright (c) 2015 AIQ. All rights reserved.
 //
 
 #import <MobileCoreServices/UTCoreTypes.h>
@@ -23,24 +23,43 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    CGFloat padding = 20.0;
-    
+    NSString* tips = nil;
+    NSString* btnTitle = nil;
+    CGFloat padding = 60.0;
+    SEL btnClicked  = nil;
+#if IMAGESOURCE == 3 // scanner
+    btnTitle = @"Open Scanner";
+    btnClicked = @selector(scannerButtonTapped:);
+    tips = @"In this example, it presents that how AIQ technology is used to continuousely scan real world and match it with predefined online resource";
+#elif IMAGESOURCE == 1 // take picture from camera
+    btnTitle = @"Take Picture";
+    btnClicked = @selector(cameraButtonTapped:);
+    tips = @"In this example, it demonstrates how to use camera to take a picture and search it from server";
+#else // IMAGESOURCE == "image picker" // 2
+    btnTitle = @"Image Picker";
+    btnClicked = @selector(galleryButtonTapped:);
+    tips = @"In this example, it shows that select a picture from photo ablum and search it from server";
+#endif
+    [self.view setBackgroundColor:UIColorFromRGB(0xf6921e)];
+    // add button
     UIButton *scannerButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    scannerButton.frame = CGRectMake(padding, 20.0 + padding, self.view.frame.size.width - 2*padding, 44.0);
-    scannerButton.backgroundColor = [UIColor lightGrayColor];
-    scannerButton.layer.cornerRadius = 4.0;
-    [scannerButton setTitle:@"Open Scanner" forState:UIControlStateNormal];
-    [scannerButton addTarget:self action:@selector(scannerButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
+    scannerButton.frame = CGRectMake(padding, 260.0 + padding, self.view.frame.size.width - 2*padding, 44.0);
+    scannerButton.backgroundColor = [UIColor whiteColor];
+    [scannerButton setTitleColor:UIColorFromRGB(0xf6921e) forState:UIControlStateNormal];
+    scannerButton.layer.cornerRadius = 16.0;
+    [scannerButton setTitle:btnTitle forState:UIControlStateNormal];
+    [scannerButton addTarget:self action:btnClicked forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:scannerButton];
     
-    UIButton *galleryButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    galleryButton.frame = CGRectMake(padding, scannerButton.bottom + padding, scannerButton.width, scannerButton.height);
-    galleryButton.backgroundColor = [UIColor lightGrayColor];
-    galleryButton.layer.cornerRadius = 4.0;
-    [galleryButton setTitle:@"Image Picker" forState:UIControlStateNormal];
-    [galleryButton addTarget:self action:@selector(galleryButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:galleryButton];
+    // add tips
+    padding = 30.0;
+    UILabel* labelTip = [[UILabel alloc] initWithFrame:CGRectMake(padding, 40.0 + padding, self.view.frame.size.width - 2*padding, 120.0)];
+    labelTip.backgroundColor = UIColorFromRGB(0xf6921e);
+    labelTip.textColor = [UIColor whiteColor];
+    labelTip.lineBreakMode = NSLineBreakByWordWrapping;
+    labelTip.numberOfLines = 0;
+    labelTip.text = tips;
+    [self.view addSubview:labelTip];
     
     // test register
     /*_loginButton = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -77,6 +96,17 @@
     
     [self presentViewController:scannerViewController animated:YES completion:nil];
 }
+
+- (void)cameraButtonTapped:(id)sender
+{
+    UIImagePickerController *imagePickerController = [[UIImagePickerController alloc] init];
+    imagePickerController.sourceType = UIImagePickerControllerSourceTypeCamera;
+    imagePickerController.mediaTypes = @[(NSString *)kUTTypeImage];
+    imagePickerController.delegate = self;
+    imagePickerController.allowsEditing = NO;
+    [self presentViewController:imagePickerController animated:YES completion:nil];
+}
+
 
 - (void)galleryButtonTapped:(id)sender
 {

@@ -1,8 +1,8 @@
 //
 //  AppDelegate.h
-//  iQKit-Example
+//  AIQKit-Example
 //
-//  Copyright (c) 2015 iQNECT. All rights reserved.
+//  Copyright (c) 2015 AIQ. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

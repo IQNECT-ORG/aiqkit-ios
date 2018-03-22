@@ -3,7 +3,7 @@
 //  iQKit-Example
 //
 //  Created by AIQ on 18/1/18.
-//  Copyright © 2018 iQNECT. All rights reserved.
+//  Copyright © 2018 AIQ. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

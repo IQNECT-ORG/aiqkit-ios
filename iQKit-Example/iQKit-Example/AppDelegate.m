@@ -1,8 +1,8 @@
 //
 //  AppDelegate.m
-//  iQKit-Example
+//  AIQKit-Example
 //
-//  Copyright (c) 2015 iQNECT. All rights reserved.
+//  Copyright (c) 2015 AIQ. All rights reserved.
 //
 
 #import "AppDelegate.h"
@@ -18,9 +18,9 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-#warning TODO insert your app ID and secret here (visit http://developer.iqnect.org to get them)
-    [iQKit setAppID:@"2932454d1e5b5bdf9658e518388b7fee2b5ab216a62ae27974"
-       andAppSecret:@"31a3082c22443c2879b81abf53ea72c943f7c81cfb35abc2f583569ee717eacb"];
+#warning TODO insert your app ID and secret here (visit http://developer.aiq.tech to get them)
+    [iQKit setAppID:@"263520e2382302e98a690a0af5c0929333bddf24e93347ce5b"
+       andAppSecret:@"5b6f4245f2c22aa184738c3dd910499f4d7d960f00bd658b38b82974133d4347"];
     
     
     return YES;

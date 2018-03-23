@@ -21,7 +21,7 @@
 #warning TODO insert your app ID and secret here (visit http://developer.aiq.tech to get them)
     [iQKit setAppID:@"5f61ed2c19e734ca4cf29aa7413dc2ec5bd7e1fb3882cdb1db"
        andAppSecret:@"15d674e0308a6d05838ca10b64c087d6287b45406137a459581a4b7bc6c1f445"];
-    
+    [iQKit setAPIServerType:iQKitAPIServerStaging]; // if you have own App Id and secret, then do not need this
     
     return YES;
 }

@@ -27,18 +27,22 @@
     NSString* btnTitle = nil;
     CGFloat padding = 60.0;
     SEL btnClicked  = nil;
+    CGFloat fontSize = 16;
 #if IMAGESOURCE == 3 // scanner
     btnTitle = @"Open Scanner";
     btnClicked = @selector(scannerButtonTapped:);
-    tips = @"In this example, it presents that how AIQ technology is used to continuousely scan real world and match it with predefined online resource";
+    tips = @"Open AIQ Scanner to start search!";
+    fontSize = 16;
 #elif IMAGESOURCE == 1 // take picture from camera
     btnTitle = @"Take Picture";
     btnClicked = @selector(cameraButtonTapped:);
-    tips = @"In this example, it demonstrates how to use camera to take a picture and search it from server";
+    tips = @"Search an image from camera capture!";
+    fontSize = 14;
 #else // IMAGESOURCE == "image picker" // 2
-    btnTitle = @"Image Picker";
+    btnTitle = @"Pick Image";
     btnClicked = @selector(galleryButtonTapped:);
-    tips = @"In this example, it shows that select a picture from photo ablum and search it from server";
+    tips = @"Search an image from Photo Gallery!";
+    fontSize = 15;
 #endif
     [self.view setBackgroundColor:UIColorFromRGB(0xf6921e)];
     // add button
@@ -53,9 +57,10 @@
     
     // add tips
     padding = 30.0;
-    UILabel* labelTip = [[UILabel alloc] initWithFrame:CGRectMake(padding, 40.0 + padding, self.view.frame.size.width - 2*padding, 120.0)];
+    UILabel* labelTip = [[UILabel alloc] initWithFrame:CGRectMake(padding, 340.0 + padding, self.view.frame.size.width - 2*padding, 40.0)];
     labelTip.backgroundColor = UIColorFromRGB(0xf6921e);
     labelTip.textColor = [UIColor whiteColor];
+    [labelTip setFont:[UIFont systemFontOfSize:fontSize]];
     labelTip.lineBreakMode = NSLineBreakByWordWrapping;
     labelTip.numberOfLines = 0;
     labelTip.text = tips;

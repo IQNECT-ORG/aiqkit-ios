@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "8AE5CA3A36942C68A4BB8E8DB7C2E16E"
+               BlueprintIdentifier = "EBD01E93049D2053B7C72F33EEEC483E"
                BlueprintName = "NFAllocInit"
                ReferencedContainer = "container:Pods.xcodeproj"
                BuildableName = "libNFAllocInit.a">

@@ -1,1 +1,1 @@
-../../../AIQKit/iQKit/include/iQKit/iQUserUploadProfileImageRequest.h
+../../../../../AIQKit/include/iQKit/iQUserUploadProfileImageRequest.h

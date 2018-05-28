@@ -13,8 +13,12 @@
 #import "SVProgressHUD.h"
 #import "SVWebViewController.h"
 
-@interface ViewController () <iQScannerViewControllerDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate>
+
+
+@interface ViewController () <iQScannerViewDelegate, iQScannerViewControllerDelegate,
+UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate>
 {
+    iQScannerView* _vv;
 }
 @end
 
@@ -38,6 +42,12 @@
     btnClicked = @selector(cameraButtonTapped:);
     tips = @"Search an image from camera capture!";
     fontSize = 14;
+#elif IMAGESOURCE == 4 // take picture from camera
+    btnTitle = @"Embed Scanner";
+    btnClicked = @selector(embedButtonTapped:);
+    tips = @"Embed scanner as subview of this page!";
+    fontSize = 14;
+    padding = 30;
 #else // IMAGESOURCE == "image picker" // 2
     btnTitle = @"Pick Image";
     btnClicked = @selector(galleryButtonTapped:);
@@ -47,7 +57,7 @@
     [self.view setBackgroundColor:UIColorFromRGB(0xf6921e)];
     // add button
     UIButton *scannerButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    scannerButton.frame = CGRectMake(padding, 260.0 + padding, self.view.frame.size.width - 2*padding, 44.0);
+    scannerButton.frame = CGRectMake(padding, self.view.frame.size.height*3/5 + padding, self.view.frame.size.width - 2*padding, 44.0);
     scannerButton.backgroundColor = [UIColor whiteColor];
     [scannerButton setTitleColor:UIColorFromRGB(0xf6921e) forState:UIControlStateNormal];
     scannerButton.layer.cornerRadius = 16.0;
@@ -57,7 +67,8 @@
     
     // add tips
     padding = 30.0;
-    UILabel* labelTip = [[UILabel alloc] initWithFrame:CGRectMake(padding, 340.0 + padding, self.view.frame.size.width - 2*padding, 40.0)];
+    UILabel* labelTip = [[UILabel alloc] initWithFrame:CGRectMake(padding, self.view.frame.size.height*3/5 + 2*padding + 44,
+                                                                  self.view.frame.size.width - 2*padding, 40.0)];
     labelTip.backgroundColor = UIColorFromRGB(0xf6921e);
     labelTip.textColor = [UIColor whiteColor];
     [labelTip setFont:[UIFont systemFontOfSize:fontSize]];
@@ -84,21 +95,53 @@
     [_loginButton addTarget:self action:@selector(loginButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:_loginButton];*/
     
-    
-    
+    /*_vv = [[iQScannerView alloc] initWithFrame:CGRectMake(0, 20, self.view.frame.size.width, self.view.frame.size.height/2)];
+    _vv.backgroundColor = [UIColor redColor];
+    [self.view addSubview:_vv];
+    [_vv load];*/
+
     [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeBlack];
 }
 
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
+    //[_vv appearView];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    //[_vv disappearView];
+}
+
+- (void)embedButtonTapped:(id)sender
+{
+    static BOOL added = NO;
+    if( !added )
+    {
+        _vv = [[iQScannerView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height*3/5)];
+        _vv.backgroundColor = [UIColor redColor];
+        [self.view addSubview:_vv];
+        added = YES;
+    }
+    else{
+        [_vv removeFromSuperview];
+        added = NO;
+    }
 }
 
 - (void)scannerButtonTapped:(id)sender
 {
+
     iQScannerViewController *scannerViewController = [[iQScannerViewController alloc] init];
-    scannerViewController.delegate = self;
     
+    scannerViewController.delegate = self;
+    //scannerViewController.preferredContentSize = CGSizeMake(self.view.frame.size.width, 2*self.view.frame.size.height/3);
+ 
+    //scannerViewController.modalPresentationStyle = UIModalPresentationCurrentContext;
+    //scannerViewController.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
+    //scannerViewController.view.frame = CGRectMake(0, 0, self.view.frame.size.width, 2*self.view.frame.size.height/3);
+    self.definesPresentationContext = YES;
     [self presentViewController:scannerViewController animated:YES completion:nil];
 }
 
@@ -161,12 +204,25 @@
     [scannerViewController dismissViewControllerAnimated:YES completion:^{
         [self processSearchResponse:searchResponse];
     }];
+    
+    [self processSearchResponse:searchResponse];
+}
+
+- (void)scannerView:(iQScannerView *)scannerView didLoadSearchResponse:(iQAPISearchResponse *)searchResponse
+{
+    //[self processSearchResponse:searchResponse];
 }
 
 - (void)scannerViewControllerDidCancel:(iQScannerViewController *)scannerViewController
 {
     [scannerViewController dismissViewControllerAnimated:YES completion:nil];
 }
+
+- (void)scannerViewDidCancel:(iQScannerView *)scannerView
+{
+    // here we do nothing
+}
+
 
 #pragma mark - UIImagePickerControllerDelegate
 

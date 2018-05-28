@@ -1,1 +1,1 @@
-../../../AIQKit/iQKit/include/iQKit/iQAPISearchRequest.h
+../../../../../AIQKit/include/iQKit/iQAPISearchRequest.h

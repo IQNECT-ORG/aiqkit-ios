@@ -1,1 +1,1 @@
-../../../AIQKit/iQKit/include/iQKit/iQUserProfileUpdateRequest.h
+../../../../../AIQKit/include/iQKit/iQUserProfileUpdateRequest.h

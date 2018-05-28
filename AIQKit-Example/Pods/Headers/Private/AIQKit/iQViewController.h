@@ -1,1 +1,1 @@
-../../../AIQKit/iQKit/include/iQKit/iQViewController.h
+../../../../../AIQKit/include/iQKit/iQViewController.h

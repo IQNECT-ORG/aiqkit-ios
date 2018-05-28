@@ -1,5 +1,5 @@
 PODS:
-  - AIQKit (0.9.4.5):
+  - AIQKit (0.9.5):
     - FBSDKCoreKit
     - FBSDKLoginKit
     - Masonry
@@ -14,9 +14,9 @@ PODS:
   - Bolts/AppLinks (1.9.0):
     - Bolts/Tasks
   - Bolts/Tasks (1.9.0)
-  - FBSDKCoreKit (4.31.1):
+  - FBSDKCoreKit (4.33.0):
     - Bolts (~> 1.7)
-  - FBSDKLoginKit (4.31.1):
+  - FBSDKLoginKit (4.33.0):
     - FBSDKCoreKit
   - Masonry (1.1.0)
   - NFAllocInit (1.1.3)
@@ -29,16 +29,20 @@ PODS:
   - SVWebViewController (1.0)
 
 DEPENDENCIES:
-  - AIQKit (~> 0.9.4.5)
+  - AIQKit (from `../`)
   - NFAllocInit (~> 1.0)
   - SVProgressHUD (~> 2.0)
   - SVWebViewController (~> 1.0)
 
+EXTERNAL SOURCES:
+  AIQKit:
+    :path: ../
+
 SPEC CHECKSUMS:
-  AIQKit: b0ee9cc89b14b358ba56c122c28ae97c08cbbd94
+  AIQKit: 2d86deb79444871c868bb6c74e797b80d7e2ea32
   Bolts: ac6567323eac61e203f6a9763667d0f711be34c8
-  FBSDKCoreKit: e08ccfcefa7bc1347a07c276dac9bf6c7fe57024
-  FBSDKLoginKit: 99797ac39252fef6f72600b886f6ee60b4b29cab
+  FBSDKCoreKit: 572b047a7e029bc44542bcf8a59414e7ff2b543e
+  FBSDKLoginKit: 88cb456349cfb3b554427ce4f8b43729d85dfb40
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   NFAllocInit: acdde5477c19982c6e92307f51a976d4ade5984e
   OpenCV: bb17904e55fc19b1f0f6c3e29bc04a7dd31eddb9
@@ -47,6 +51,6 @@ SPEC CHECKSUMS:
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   SVWebViewController: c36dda7326e81fcae0abf5d02bf7bbf7e41be901
 
-PODFILE CHECKSUM: 5e3d180f095f532bcaeffc1a58f143be59fe26b7
+PODFILE CHECKSUM: 128df4cc99e96f00807b2901f988939a1eadc2e1
 
 COCOAPODS: 1.4.0

@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "AIQKit"
-  s.version      = "0.9.4.5"
+  s.version      = "0.9.5"
   s.summary      = "Search by AIQ."
   s.description  = <<-DESC
                    Search by AIQ 
@@ -16,11 +16,11 @@ Pod::Spec.new do |s|
   s.platform     = :ios, "8.3"
   s.source       = { :git => "https://github.com/iqnect-org/aiqkit-ios.git", :tag => s.version.to_s }
   
-  s.source_files = "iQKit/include/iQKit/*.h"
-  s.public_header_files = "iQKit/include/iQKit/*.h"
+  s.source_files = "AIQKit/include/iQKit/*.h"
+  s.public_header_files = "AIQKit/include/iQKit/*.h"
 
-  s.resources = "iQKit/iQKitResources.bundle"
-  s.vendored_libraries = 'iQKit/libiQKit.a'
+  s.resources = "AIQKit/iQKitResources.bundle"
+  s.vendored_libraries = 'AIQKit/libiQKit.a'
   s.frameworks = "AVFoundation", "CoreLocation", "CoreText", "CoreData", "QuartzCore"
   s.library  = "c++"
   s.requires_arc = true

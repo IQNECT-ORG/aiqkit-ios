@@ -173,6 +173,11 @@
 					7C6AACEA1AF85499004D52A7 = {
 						CreatedOnToolsVersion = 6.3.1;
 						DevelopmentTeam = 9F5S9B68X4;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};

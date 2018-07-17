@@ -33,7 +33,7 @@ extern NSString * const kIQAPIVersionHeader;
 #pragma mark - Public
 
 @property (nonatomic, assign) BOOL isLegacyRequest;
-@property (nonatomic, readonly) iQAPIErrorResponse *errorResponse;
+@property (nonatomic, strong) iQAPIErrorResponse *errorResponse;
 @property (nonatomic, assign) BOOL supressAPIErrors;
 
 + (instancetype)request;

@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "AIQKit"
-  s.version      = "0.9.5"
+  s.version      = "0.9.6"
   s.summary      = "Search by AIQ."
   s.description  = <<-DESC
                    Search by AIQ 

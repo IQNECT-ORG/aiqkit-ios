@@ -6,6 +6,7 @@
 
 #import "iQViewController.h"
 #import "iQScannerOverlayView.h"
+#import "iQNothingScannedViewController.h"
 #import <AVFoundation/AVFoundation.h>
 
 @class iQScannerViewController;
@@ -31,7 +32,7 @@ typedef NS_ENUM(NSInteger, iQScannerViewControllerIntent) {
 
 @end
 
-@interface iQScannerViewController : iQViewController <AVCaptureMetadataOutputObjectsDelegate, AVCaptureVideoDataOutputSampleBufferDelegate>
+@interface iQScannerViewController : iQViewController <AVCaptureMetadataOutputObjectsDelegate, iQNothingScannedViewControllerDelegate, AVCaptureVideoDataOutputSampleBufferDelegate>
 
 @property (nonatomic, assign) NSObject<iQScannerViewControllerDelegate> *delegate;
 
@@ -77,6 +78,9 @@ typedef NS_ENUM(NSInteger, iQScannerViewControllerIntent) {
 -(void)stopRunning;
 -(void)startOpenGL;
 -(void)stopOpenGL;
+
+-(void)stopTimeoutDetectionTimer;
+-(void)resetTimeoutDetectiontimer;
 
 - (void)setTorchMode:(AVCaptureTorchMode)torchMode;
 

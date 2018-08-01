@@ -19,6 +19,7 @@
 UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate>
 {
     iQScannerView* _vv;
+    UIButton *scannerButton;
 }
 @end
 
@@ -43,7 +44,7 @@ UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDele
     tips = @"Search an image from camera capture!";
     fontSize = 14;
 #elif IMAGESOURCE == 4 // take picture from camera
-    btnTitle = @"Embed Scanner";
+    btnTitle = @"Open Scanner";
     btnClicked = @selector(embedButtonTapped:);
     tips = @"Embed scanner as subview of this page!";
     fontSize = 14;
@@ -56,7 +57,7 @@ UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDele
 #endif
     [self.view setBackgroundColor:UIColorFromRGB(0xf6921e)];
     // add button
-    UIButton *scannerButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    scannerButton = [UIButton buttonWithType:UIButtonTypeCustom];
     scannerButton.frame = CGRectMake(padding, self.view.frame.size.height*3/5 + padding, self.view.frame.size.width - 2*padding, 44.0);
     scannerButton.backgroundColor = [UIColor whiteColor];
     [scannerButton setTitleColor:UIColorFromRGB(0xf6921e) forState:UIControlStateNormal];
@@ -123,10 +124,12 @@ UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDele
         _vv.backgroundColor = [UIColor redColor];
         [self.view addSubview:_vv];
         added = YES;
+        [scannerButton setTitle:@"Close Scanner" forState:UIControlStateNormal];
     }
     else{
         [_vv removeFromSuperview];
         added = NO;
+        [scannerButton setTitle:@"Open Scanner" forState:UIControlStateNormal];
     }
 }
 

@@ -1,5 +1,5 @@
 PODS:
-  - AIQKit (0.9.5):
+  - AIQKit (0.9.6):
     - FBSDKCoreKit
     - FBSDKLoginKit
     - Masonry
@@ -34,12 +34,25 @@ DEPENDENCIES:
   - SVProgressHUD (~> 2.0)
   - SVWebViewController (~> 1.0)
 
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Bolts
+    - FBSDKCoreKit
+    - FBSDKLoginKit
+    - Masonry
+    - NFAllocInit
+    - OpenCV
+    - SBJson
+    - SDWebImage
+    - SVProgressHUD
+    - SVWebViewController
+
 EXTERNAL SOURCES:
   AIQKit:
-    :path: ../
+    :path: "../"
 
 SPEC CHECKSUMS:
-  AIQKit: 2d86deb79444871c868bb6c74e797b80d7e2ea32
+  AIQKit: ee67bc8c32d112fa5be6a01120db514dca3de7b3
   Bolts: ac6567323eac61e203f6a9763667d0f711be34c8
   FBSDKCoreKit: 572b047a7e029bc44542bcf8a59414e7ff2b543e
   FBSDKLoginKit: 88cb456349cfb3b554427ce4f8b43729d85dfb40
@@ -53,4 +66,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 128df4cc99e96f00807b2901f988939a1eadc2e1
 
-COCOAPODS: 1.4.0
+COCOAPODS: 1.5.3

@@ -1,7 +1,7 @@
-Pod::Spec.new do |s|
+Pod::Spec.new do |s| 
 
   s.name         = "AIQKit"
-  s.version      = "0.9.6"
+  s.version      = "0.9.7"
   s.summary      = "Search by AIQ."
   s.description  = <<-DESC
                    Search by AIQ 
@@ -13,7 +13,7 @@ Pod::Spec.new do |s|
   s.license      = { :type => "Commercial", :text => "http://aiq.tech/enterprise.php#" }
   s.author        = "AIQ"
 
-  s.platform     = :ios, "8.3"
+  s.platform     = :ios, "8.0"
   s.source       = { :git => "https://github.com/iqnect-org/aiqkit-ios.git", :tag => s.version.to_s }
   
   s.source_files = "AIQKit/include/iQKit/*.h"
@@ -29,9 +29,9 @@ Pod::Spec.new do |s|
   s.dependency 'SVProgressHUD', '~> 2.0'
   s.dependency 'SDWebImage', '3.7.1'
   s.dependency 'SBJson', '~> 5.0'
-  s.dependency 'Masonry'
-  s.dependency 'OpenCV', '2.4.9'
-  s.dependency 'FBSDKCoreKit'
-  s.dependency 'FBSDKLoginKit'
-
+  s.dependency 'Masonry', '1.1.0'
+  s.dependency 'OpenCV', '3.2.0'
+  s.dependency 'FBSDKCoreKit', '4.14.0'
+  s.dependency 'FBSDKLoginKit', '4.14.0'
+  s.dependency 'FBSDKShareKit', '4.14.0'
 end

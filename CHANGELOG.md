@@ -8,6 +8,7 @@ Released on Wed, Nov 11, 2018.
 #### Updated
 * Bitcode support
 * Update dependency - OpenCV 3.2.0
+* Update dependency - SDWebImage 4.4.1
 
 #### Additional Changes
 * None

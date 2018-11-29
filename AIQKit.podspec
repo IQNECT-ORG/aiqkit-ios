@@ -27,7 +27,7 @@ Pod::Spec.new do |s|
 
   s.dependency 'NFAllocInit', '~> 1.0'
   s.dependency 'SVProgressHUD', '~> 2.0'
-  s.dependency 'SDWebImage', '3.7.1'
+  s.dependency 'SDWebImage', '4.4.1'
   s.dependency 'SBJson', '~> 5.0'
   s.dependency 'Masonry', '1.1.0'
   s.dependency 'OpenCV', '3.2.0'

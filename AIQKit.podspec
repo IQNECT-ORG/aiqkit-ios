@@ -30,7 +30,6 @@ Pod::Spec.new do |s|
   s.dependency 'SBJson', '~> 5.0'
   s.dependency 'Masonry', '1.1.0'
   s.dependency 'OpenCV', '3.2.0'
-  s.dependency 'FBSDKCoreKit', '~> 4.14.0'
-  s.dependency 'FBSDKLoginKit', '~> 4.14.0'
-  s.dependency 'FBSDKShareKit', '~> 4.14.0'
+  s.dependency 'FBSDKCoreKit'
+  s.dependency 'FBSDKLoginKit'
 end

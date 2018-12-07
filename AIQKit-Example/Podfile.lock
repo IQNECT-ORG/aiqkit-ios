@@ -1,12 +1,12 @@
 PODS:
-  - AIQKit (0.9.6):
+  - AIQKit (0.9.8):
     - FBSDKCoreKit
     - FBSDKLoginKit
-    - Masonry
+    - Masonry (= 1.1.0)
     - NFAllocInit (~> 1.0)
-    - OpenCV (= 2.4.9)
+    - OpenCV (= 3.2.0)
     - SBJson (~> 5.0)
-    - SDWebImage (= 3.7.1)
+    - SDWebImage (= 4.4.1)
     - SVProgressHUD (~> 2.0)
   - Bolts (1.9.0):
     - Bolts/AppLinks (= 1.9.0)
@@ -14,17 +14,19 @@ PODS:
   - Bolts/AppLinks (1.9.0):
     - Bolts/Tasks
   - Bolts/Tasks (1.9.0)
-  - FBSDKCoreKit (4.33.0):
-    - Bolts (~> 1.7)
-  - FBSDKLoginKit (4.33.0):
+  - FBSDKCoreKit (4.39.0):
+    - Bolts (~> 1.9)
+  - FBSDKLoginKit (4.39.0):
     - FBSDKCoreKit
   - Masonry (1.1.0)
   - NFAllocInit (1.1.3)
-  - OpenCV (2.4.9)
+  - OpenCV (3.2.0):
+    - OpenCV/Dynamic (= 3.2.0)
+  - OpenCV/Dynamic (3.2.0)
   - SBJson (5.0.0)
-  - SDWebImage (3.7.1):
-    - SDWebImage/Core (= 3.7.1)
-  - SDWebImage/Core (3.7.1)
+  - SDWebImage (4.4.1):
+    - SDWebImage/Core (= 4.4.1)
+  - SDWebImage/Core (4.4.1)
   - SVProgressHUD (2.2.5)
   - SVWebViewController (1.0)
 
@@ -52,18 +54,18 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  AIQKit: af4ffcdef4884ea157002cbc100bc11d2b11b912
+  AIQKit: b0cd5e71d5cd4dd4330dd3a1f25ace63fbfcb9e4
   Bolts: ac6567323eac61e203f6a9763667d0f711be34c8
-  FBSDKCoreKit: 572b047a7e029bc44542bcf8a59414e7ff2b543e
-  FBSDKLoginKit: 88cb456349cfb3b554427ce4f8b43729d85dfb40
+  FBSDKCoreKit: 1e3981faefab8c88edfaa9eecd94aab02d99a9bc
+  FBSDKLoginKit: 30ba5039a2c53d65a75103889bc2deebdacd5a1f
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   NFAllocInit: acdde5477c19982c6e92307f51a976d4ade5984e
-  OpenCV: bb17904e55fc19b1f0f6c3e29bc04a7dd31eddb9
+  OpenCV: 0f7ab403d1e81769bc6f4f524c3c6928ecb1fdb8
   SBJson: 73c848dc34be51fda282fab12bda6c426f5ead08
-  SDWebImage: ed3095af2ff88b436426037444979b917f6c5575
+  SDWebImage: 47e9b5b925cbce75946c23f0c42dd19464189af4
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   SVWebViewController: c36dda7326e81fcae0abf5d02bf7bbf7e41be901
 
-PODFILE CHECKSUM: 128df4cc99e96f00807b2901f988939a1eadc2e1
+PODFILE CHECKSUM: de12f51d23c8bc01be46ef5ea037b0a3f0aaeea2
 
 COCOAPODS: 1.5.3

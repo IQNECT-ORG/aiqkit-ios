@@ -2,6 +2,11 @@
 All notable changes to AIQKit will be documented in this file.
 `AIQKit` adheres to [Semantic Versioning](http://semver.org/).
 --- 
+## [0.9.10](https://github.com/aiqtech/aiqkit-ios/releases/tag/0.9.10) (22/01/2019)
+Released on Tue, Jan 22, 2019. 
+#### Updated
+* Add new pod dependency for FBSDKShareKit
+
 ## [0.9.9](https://github.com/aiqtech/aiqkit-ios/releases/tag/0.9.9) (27/12/2018)
 Released on Wed, Dec 27, 2018. 
 

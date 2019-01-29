@@ -1,7 +1,7 @@
 Pod::Spec.new do |s| 
 
   s.name         = "AIQKit"
-  s.version      = "0.9.10"
+  s.version      = "0.9.11"
   s.summary      = "Search by AIQ."
   s.description  = <<-DESC
                    Search by AIQ 
@@ -30,7 +30,7 @@ Pod::Spec.new do |s|
   s.dependency 'SBJson', '~> 5.0'
   s.dependency 'Masonry', '1.1.0'
   s.dependency 'OpenCV', '3.2.0'
-  s.dependency 'FBSDKCoreKit'
-  s.dependency 'FBSDKLoginKit'
-  s.dependency 'FBSDKShareKit'
+  s.dependency 'FBSDKCoreKit', '4.40.0'
+  s.dependency 'FBSDKLoginKit', '4.40.0'
+  s.dependency 'FBSDKShareKit', '4.40.0'
 end

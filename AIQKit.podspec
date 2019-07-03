@@ -24,6 +24,7 @@ Pod::Spec.new do |s|
   s.library  = "c++"
   s.requires_arc = true
 
+  s.dependency 'AIQSDK'
   s.dependency 'NFAllocInit', '~> 1.0'
   s.dependency 'SVProgressHUD', '~> 2.0'
   s.dependency 'SDWebImage', '4.4.1'
@@ -33,4 +34,5 @@ Pod::Spec.new do |s|
   s.dependency 'FBSDKCoreKit', '4.40.0'
   s.dependency 'FBSDKLoginKit', '4.40.0'
   s.dependency 'FBSDKShareKit', '4.40.0'
+
 end

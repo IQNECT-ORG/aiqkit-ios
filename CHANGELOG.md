@@ -2,6 +2,14 @@
 All notable changes to AIQKit will be documented in this file.
 `AIQKit` adheres to [Semantic Versioning](http://semver.org/).
 --- 
+## [1.0.0](https://github.com/aiqtech/aiqkit-ios/releases/tag/0.9.10) (22/01/2019)
+Released on Wed, Jul 3, 2019. 
+#### Updated
+* V1.0.0 release for AIQKit
+* Uses AIQApi cocoapod as dependency and new AIQ Platform API
+* Updated AIQ Scanner view
+
+
 ## [0.9.11](https://github.com/aiqtech/aiqkit-ios/releases/tag/0.9.10) (22/01/2019)
 Released on Tue, Jan 29, 2019. 
 #### Updated

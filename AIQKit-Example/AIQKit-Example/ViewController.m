@@ -52,6 +52,9 @@
     scannerViewController.delegate = self;
     self.definesPresentationContext = YES;
     [self presentViewController:scannerViewController animated:YES completion:nil];
+    
+    // to enable QR Code handling
+    scannerViewController.handlesQRCode = YES;
 }
 
 - (void)cameraButtonTapped:(UIButton *)sender
@@ -137,4 +140,9 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
+// QR code handler
+//- (void)scannerViewController:(iQScannerViewController *)scannerViewController didScanQRCodeWithURL:(NSURL *)url {  
+//    // QRcode detected
+//    NSLog(@"QR code URL is %@",url);
+//}
 @end
